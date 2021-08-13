@@ -27,7 +27,7 @@ export class NewsService {
       const receivers = await this.receiversService.findAll();
       const emails = receivers.map(item => item.email);
 
-      await this.smtpService.sendEmail({
+      this.smtpService.sendEmail({
         to: emails,
         subject: `Noticias Quentes: ${new_.title}`,
         text: new_.body,

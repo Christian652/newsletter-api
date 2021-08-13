@@ -15,15 +15,15 @@ import { SmtpService } from './smtp.service';
         port: 587,
         secure: false,
         auth: {
-          user: 'christianguitarr2@gmail.com',
-          pass: 'guitarra652',
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASSWORD,
         },
         tls: {
           rejectUnauthorized: false
         }
       },
       defaults: {
-        from: 'christianguitarr2@gmail.com',
+        from: '<não responde> aaaaaaa',
       },
       template: {
         dir: join(__dirname, 'templates'),

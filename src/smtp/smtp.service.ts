@@ -10,7 +10,7 @@ export class SmtpService {
         try {
             await this.mailerService.sendMail({
                 to: options.to,
-                from: 'christianferreira652@gmail.com',
+                from: '<no reply> Newsletter',
                 subject: options.subject,
                 template: './mail',
                 context: { 
